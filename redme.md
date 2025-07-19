@@ -1,4 +1,4 @@
-# 👨‍💻SOC Home Lab: Attack & Defense Simulation🚀
+# 👨‍💻SOC Home Lab: Attack & Defense Simulation 🚀
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -18,7 +18,24 @@
 ---
 ## 📌Introduction
 This project demonstrates the setup of a home lab environment for cybersecurity testing, including an attack machine (Kali Linux), a target machine (Windows 10 VM), and a logging system (Splunk) to monitor malicious activities. The project involves:
-- Setting up virtual machines
-- Installing and configuring Sysmon for log collection
-- Deploying malware using `msfvenom`
-- Monitoring attacks using Splunk
+
+- Setting up isolated virtual machines.
+
+- Installing and configuring Sysmon for comprehensive log collection.
+
+- Generating and deploying malware using msfvenom.
+
+- Monitoring attacks using Splunk for analysis and detection.
+
+Note: This lab is for educational purposes only. All activities should be conducted in a strictly isolated environment to prevent any unauthorized access or damage to your personal network or data. Do not use these techniques for unauthorized activities.
+
+## 🔧 Prerequisites
+
+| Requirement           | Description                                                                 |
+| :-------------------- | :-------------------------------------------------------------------------- |
+| RAM                   | At least 16GB (to comfortably run multiple VMs simultaneously).             |
+| Virtualization Software | VMware Workstation (Pro/Player) or VirtualBox. Ensure you are familiar with basic VM operations. |
+| Operating Systems     | ISO files for Windows 10 (a non-N edition is generally recommended for broader compatibility) and Kali Linux. |   
+| Logging Tools         | Splunk Enterprise (Free/Trial version for home lab) and Sysmon setup files, along with a pre-configured `sysmonconfig.xml`. |
+| Internet Connection   | Required for downloading ISOs, tools, updates, and configuration files.     |
+| Disk Space            | At least 100GB of free disk space for VM images and logs.                   |
