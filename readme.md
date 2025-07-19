@@ -17,8 +17,7 @@
 9.  [Step 6: Monitoring Logs with Splunk](#step-6-monitoring-logs-with-splunk)
 10. [Troubleshooting](#troubleshooting)
 11. [Next Steps & Future Improvements](#next-steps--future-improvements)
-12. [How to Contribute](#how-to-contribute)
-13. [Conclusion](#conclusion)
+12. [Conclusion](#conclusion)
 
 ---
 ## 📌Introduction
@@ -128,3 +127,54 @@ For VMware Workstation:
         * Select `Network Adapter`.
         * Choose **Custom: VMnet1 (Host-only)**.
         * Click `OK`.
+
+---
+Okay, I understand. You want the Markdown code for just those specific sections: **Step 2 (Splunk Enterprise on Windows VM)** and the **Download and Install part of Step 6 (Splunk Universal Forwarder)**.
+
+Here is the Markdown code for your `README.md`:
+
+---
+### Step 2: Installing Splunk for Log Monitoring (on Windows 10 VM)
+
+We will install Splunk Enterprise (trial version) directly on your **Windows 10 VM** for simplicity in local log collection.
+
+**Note:** Since your VM has no internet access, you must first download the Splunk installer on your host machine and transfer it to the VM (e.g., via shared folders/or change network setting Host only to NATor bridge network).
+
+1.  **Download Splunk Enterprise (on Host, then transfer to VM):**
+    * Download the Windows MSI installer from the [Splunk Website](https://www.splunk.com/en_us/download/splunk-enterprise.html) on your **host machine**.
+    * Transfer the installer file to your Windows 10 VM (e.g., to `C:\Users\YourUser\Downloads`).
+    * **Reference Video: ▶️ [How To Install Splunk Enterprise on Windows 10/11 VM](https://www.youtube.com/watch?v=cQhmoC29YD0&vl=ja)**
+
+2.  **Install Splunk on your Windows 10 VM:**
+    * Inside your Windows 10 VM, locate the transferred MSI installer.
+    * Run it **as Administrator**.
+    * Follow the installation wizard (typically "Typical" installation, create admin username and password).
+    * Splunk Web should launch automatically in your VM's browser.
+
+---
+
+### Step 2.1: Monitoring Logs with Splunk (Splunk Universal Forwarder)
+
+*(This section primarily covers installing the Forwarder on another machine if you want to send its logs to your Splunk Enterprise on the Windows 10 VM.)*
+
+1.  **Download and Install Splunk Universal Forwarder (on relevant source machine, e.g., another VM or your Host):**
+    * Download the Universal Forwarder installer (e.g., Windows 64-bit MSI) from the [Splunk Website](https://www.splunk.com/en_us/download/universal-forwarder.html) on your host.
+    
+    * Run the installer as Administrator. During installation, specify the Receiving Indexer as the IP of your Windows 10 VM (where Splunk Enterprise is installed, e.g., `172.16.0.20` or its current DHCP IP) and **Port `9997`**.
+
+    * **Reference Video: ▶️ [Splunk Universal Forwarder Installation and Configuration](https://www.youtube.com/watch?v=_2O-qxS8nqI)**
+
+---
+## Step 3: Installing Sysmon on Windows 10
+1. Download Sysmon from [Microsoft Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon).
+2. Download a pre-configured `sysmonconfig.xml` from [Sysmon Modular](https://github.com/olafhartong/sysmon-modular).
+3. Open **PowerShell as Administrator** and run:
+   ```powershell
+   cd "C:\Users\Downloads\sysmon"
+   .\sysmon64.exe -i sysmonconfig.xml
+   ```
+4. Verify Sysmon is running:
+   ```powershell
+   Get-Process sysmon64
+
+5. * **Reference Video: ▶️ [Splunk Universal Forwarder Installation and Configuration](https://www.youtube.com/watch?v=uJ7pv6blyog)**
