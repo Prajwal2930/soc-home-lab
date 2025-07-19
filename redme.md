@@ -10,7 +10,6 @@
     * [1.1 Install Kali Linux (Attacker Machine)](#11-install-kali-linux-attacker-machine)
     * [1.2 Install Windows 10 (Target Machine)](#12-install-windows-10-target-machine)
     * [1.3 Configure Network Adapters](#13-configure-network-adapters)
-    * [1.4 Set Static IP Addresses](#14-set-static-ip-addresses)
 5.  [Step 2: Installing Splunk for Log Monitoring](#step-2-installing-splunk-for-log-monitoring)
 6.  [Step 3: Installing Sysmon on Windows 10](#step-3-installing-sysmon-on-windows-10)
 7.  [Step 4: Generating Malware with msfvenom](#step-4-generating-malware-with-msfvenom)
@@ -117,7 +116,7 @@ For VMware Workstation:
 4.  **Locate and Configure VMnet1 (Host-only):**
     * In the Virtual Network Editor window, select `VMnet1`.
     * Ensure "Host-only (Connect VMs to this private network)" is selected.
-    * **Crucially, UNCHECK** "Use local DHCP service to distribute IP addresses to VMs".
+   * **Crucially, CHECK** "Use local DHCP service to distribute IP addresses to VMs".
     * Confirm the **Subnet IP** is `172.16.0.0` and **Subnet mask** is `255.255.255.0`.
     * **Important:** Note that your Host machine's IP on this VMnet1 adapter will typically be `172.16.0.1`. This is where your VMs will send logs if Splunk is on the Host.
     * Click `Apply` and `OK`.
