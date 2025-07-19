@@ -48,7 +48,7 @@ Note: This lab is for educational purposes only. All activities should be conduc
 | Disk Space            | At least 100GB of free disk space for VM images and logs.                   |
 
 ---
-### Network Topolog
+## Network Topology
 
 Below is a simple network topology illustrating the setup. For optimal lab isolation and communication, it's highly recommended to configure your Virtual Machines with **Host-Only network adapters (VMnet1)**. This ensures they can communicate with each other while being completely isolated from your main home network, which is crucial for security when experimenting with malware.
 
