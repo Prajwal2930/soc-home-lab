@@ -96,3 +96,36 @@ Before starting, ensure you have your chosen virtualization software (
       ![Windows 10 VM Details with VMnet1](images/windows_vm_details_vmnet1.png)
 3.  **Disable Windows Defender (Temporarily for testing):** Go to `Settings` > `Update & Security` > `Windows Security` > `Virus & threat protection` > `Manage settings` and turn off "Real-time protection." This is necessary for the malware simulation to work effectively in a controlled lab. Remember to re-enable it or use an EDR/AV solution in a production environment.
 4.  **Install VMware Tools / VirtualBox Guest Additions:** This will improve performance and enable features like drag-and-drop file transfer, which can be useful for deploying the payload.
+
+---
+#### 1.3 Configure Network Adapters (for VMware Workstation - using Host-Only VMnet1)
+
+This is a critical step for isolating your lab and enabling communication between VMs.
+
+For VMware Workstation:
+
+1.  **Open VMware Workstation:** Launch the application.
+    ![VMware Workstation Main Interface](images/vmware_main_interface.png)
+
+2.  **Access Virtual Network Editor:**
+    * Go to `Edit` in the top menu bar.
+    * Select `Virtual Network Editor...`
+    ![VMware Edit Menu - Virtual Network Editor](images/vmware_edit_menu.png)
+
+3.  **Allow Changes (if prompted):** Click `Change Settings` if necessary to enable modifications.
+
+4.  **Locate and Configure VMnet1 (Host-only):**
+    * In the Virtual Network Editor window, select `VMnet1`.
+    * Ensure "Host-only (Connect VMs to this private network)" is selected.
+    * **Crucially, UNCHECK** "Use local DHCP service to distribute IP addresses to VMs".
+    * Confirm the **Subnet IP** is `172.16.0.0` and **Subnet mask** is `255.255.255.0`.
+    * **Important:** Note that your Host machine's IP on this VMnet1 adapter will typically be `172.16.0.1`. This is where your VMs will send logs if Splunk is on the Host.
+    * Click `Apply` and `OK`.
+    ![VMnet1 Host-Only Configuration in Virtual Network Editor](images/vmnet1_editor_configured.png)
+
+5.  **Assign Network Adapter to VMs:**
+    * For **Kali Linux VM** and **Windows 10 VM** (ensure VMs are powered off first):
+        * Right-click on the VM in the VMware Workstation library and go to `Settings...`
+        * Select `Network Adapter`.
+        * Choose **Custom: VMnet1 (Host-only)**.
+        * Click `OK`.
