@@ -1,5 +1,8 @@
 # 👨‍💻SOC Home Lab: Attack & Defense Simulation 🚀
 
+### 📌 Connect with Me:
+<a href="https://www.linkedin.com/in/prajwal-kunte-008869313/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+
 ---
 ## Table of Contents
 
@@ -238,6 +241,3 @@ This project demonstrates how to:
 - Use Splunk for threat monitoring
 
 > **Note:** This is for educational purposes only. Do not use these techniques for unauthorized activities.
-
-### 📌 Connect with Me:
-<a href="https://www.linkedin.com/in/prajwal-kunte-008869313/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
