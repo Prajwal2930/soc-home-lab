@@ -72,6 +72,8 @@ Before starting, ensure you have your chosen virtualization software (VMware Wor
     * Follow the on-screen prompts for installation. Choose a username and password.
     * **Allocate at least 4GB RAM and 2 CPU cores** to the Kali VM.
     * Set the hard disk size to at least 40GB.
+    * **After initial setup and network adapter configuration (covered in 1.3):**
+      ![Kali Linux VM Details with VMnet1](images/kali_vm_details_vmnet1.png)
 3.  **Update and Upgrade Kali:** After installation, log in and open a terminal.
     ```bash
     sudo apt update && sudo apt upgrade -y
@@ -87,6 +89,7 @@ Before starting, ensure you have your chosen virtualization software (VMware Wor
     * Follow the installation wizard. You can skip entering a product key for a trial period. Choose Windows 10 Pro for this lab.
     * **Allocate at least 8GB RAM and 2-4 CPU cores** to the Windows 10 VM.
     * Set the hard disk size to at least 60GB.
+    * **After initial setup and network adapter configuration (covered in 1.3):**
+      ![Windows 10 VM Details with VMnet1](images/windows_vm_details_vmnet1.png)
 3.  **Disable Windows Defender (Temporarily for testing):** Go to `Settings` > `Update & Security` > `Windows Security` > `Virus & threat protection` > `Manage settings` and turn off "Real-time protection." This is necessary for the malware simulation to work effectively in a controlled lab. Remember to re-enable it or use an EDR/AV solution in a production environment.
-4.  **Install VMware Tools / VirtualBox Guest Additions:** This will improve performance and enable features like drag-and-drop file transfer, which can be useful for deploying the payload.    
-
+4.  **Install VMware Tools / VirtualBox Guest Additions:** This will improve performance and enable features like drag-and-drop file transfer, which can be useful for deploying the payload.
