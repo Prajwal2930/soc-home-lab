@@ -3,10 +3,10 @@
 ---
 ## Table of Contents
 
-1.  [Introduction](#introduction)
-2.  [Prerequisites](#prerequisites)
-3.  [Network Topology](#network-topology)
-4.  [Step 1: Setting Up Virtual Machines](#step-1-setting-up-virtual-machines)
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Network Topology](#network-topology)
+4. [Step 1: Setting Up Virtual Machines](#step-1-setting-up-virtual-machines)
     * [1.1 Install Kali Linux (Attacker Machine)](#11-install-kali-linux-attacker-machine)
     * [1.2 Install Windows 10 (Target Machine)](#12-install-windows-10-target-machine)
     * [1.3 Configure Network Adapters](#13-configure-network-adapters)
@@ -34,7 +34,7 @@ This project demonstrates the setup of a home lab environment for cybersecurity 
 Note: This lab is for educational purposes only. All activities should be conducted in a strictly isolated environment to prevent any unauthorized access or damage to your personal network or data. Do not use these techniques for unauthorized activities.
 
 ---
-## 🔧 Prerequisites
+## 🔧Prerequisites
 
 | Requirement           | Description                                                                 |
 | :-------------------- | :-------------------------------------------------------------------------- |
@@ -96,7 +96,7 @@ Before starting, ensure you have your chosen virtualization software (
 4.  **Install VMware Tools / VirtualBox Guest Additions:** This will improve performance and enable features like drag-and-drop file transfer, which can be useful for deploying the payload.
 
 ---
-#### 1.3 Configure Network Adapters (for VMware Workstation - using Host-Only VMnet1)
+### 1.3 Configure Network Adapters 
 
 This is a critical step for isolating your lab and enabling communication between VMs.
 
@@ -129,12 +129,8 @@ For VMware Workstation:
         * Click `OK`.
 
 ---
-Okay, I understand. You want the Markdown code for just those specific sections: **Step 2 (Splunk Enterprise on Windows VM)** and the **Download and Install part of Step 6 (Splunk Universal Forwarder)**.
 
-Here is the Markdown code for your `README.md`:
-
----
-### Step 2: Installing Splunk for Log Monitoring (on Windows 10 VM)
+## Step 2: Installing Splunk for Log Monitoring 
 
 We will install Splunk Enterprise (trial version) directly on your **Windows 10 VM** for simplicity in local log collection.
 
@@ -244,4 +240,4 @@ This project demonstrates how to:
 > **Note:** This is for educational purposes only. Do not use these techniques for unauthorized activities.
 
 ### 📌 Connect with Me:
-- [LinkedIn](https://www.linkedin.com/in/prajwal-kunte-008869313/) 
+<a href="https://www.linkedin.com/in/prajwal-kunte-008869313/"><img src="https://img.shields.io/badge/-LinkedIn-0072b1?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
