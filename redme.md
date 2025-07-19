@@ -60,7 +60,9 @@ The Kali Linux machine initiates attacks against the Windows 10 VM. Logs generat
 
 ## Step 1: Setting Up Virtual Machines
 
-Before starting, ensure you have your chosen virtualization software (VMware Workstation or VirtualBox) installed and updated.
+Before starting, ensure you have your chosen virtualization software (
+    [VMware Workstation Pro/Player](https://www.vmware.com/products/workstation-player.html) or
+) installed and updated.
 
 ### 1.1 Install Kali Linux (Attacker Machine)
 
